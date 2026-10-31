@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusFlow | Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>🎓 TechWithSachin</h2>
+        <button id="themeBtn">🌙 Dark Mode</button>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h1>Student Task Manager</h1>
+            <p>Organize your tasks. Achieve your goals.</p>
+        </section>
+
+        <section class="stats">
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <h2 id="total">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <h2 id="completed">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <h2 id="pending">0</h2>
+            </div>
+        </section>
+
+        <section class="task-section">
+
+            <h2>My Tasks</h2>
+
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter your task..."
+                    required
+                >
+
+                <select id="category">
+                    <option>Study</option>
+                    <option>Project</option>
+                    <option>Personal</option>
+                    <option>Other</option>
+                </select>
+
+                <button type="submit">+ Add Task</button>
+            </form>
+
+            <div class="filters">
+                <button data-filter="all">All</button>
+                <button data-filter="pending">Pending</button>
+                <button data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <div class="progress">
+                <p>Task Completion Progress</p>
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+                <p id="progressText">0%</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>TechWithSachin | CSE | 5th sem</p>
+        <p>Developed using HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
